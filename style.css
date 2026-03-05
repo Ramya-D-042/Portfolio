@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Navbar */
+nav {
+  background: #0f172a;
+  color: white;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 80px 8%;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+.hero h3 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Sections */
+.card-section {
+  padding: 50px 8%;
+}
+
+.card-section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #0f172a;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  font-weight: 600;
+}
+
+/* Projects */
+.project-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+/* Footer */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-buttons a {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.social-buttons .linkedin {
+  background: #0a66c2;
+  color: white;
+}
+
+.social-buttons .github {
+  background: #111827;
+  color: white;
+}
+
+.social-buttons a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+/* Advanced Hover Effects */
+.card:hover, .project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(56,189,248,0.25);
+  transition: 0.4s ease;
+}
+
+/* Glow button */
+.social-buttons a {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-buttons a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.6s;
+}
+
+.social-buttons a:hover::after {
+  left: 100%;
+}
+
+/* Smooth section animation */
+.card-section {
+  animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== COLOR ENHANCEMENTS FOR LOWER SECTIONS ===== */
+
+/* Colorful Section Backgrounds */
+#about {
+  background: linear-gradient(135deg, #ecfeff, #f0f9ff);
+  border-radius: 20px;
+  margin: 30px 5%;
+}
+
+#skills {
+  background: linear-gradient(135deg, #fef3c7, #fff7ed);
+  border-radius: 20px;
+  margin: 30px 5%;
+}
+
+#projects {
+  background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+  border-radius: 20px;
+  margin: 30px 5%;
+}
+
+#contact {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  border-radius: 20px;
+  margin: 30px 5%;
+}
+
+/* Gradient Section Titles */
+.card-section h2 {
+  font-size: 30px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Colorful Skill Cards */
+.card {
+  border-left: 6px solid #38bdf8;
+}
+
+.card:nth-child(2n) { border-left-color: #f59e0b; }
+.card:nth-child(3n) { border-left-color: #8b5cf6; }
+.card:nth-child(4n) { border-left-color: #22c55e; }
+.card:nth-child(5n) { border-left-color: #ef4444; }
+
+/* Colorful Project Cards */
+.project-card {
+  border-top: 5px solid #6366f1;
+}
+
+.project-card:nth-of-type(2) {
+  border-top-color: #22c55e;
+}
+
+/* Footer Gradient Upgrade */
+footer {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+}
+/* ===== LANGUAGES KNOWN - PROFESSIONAL SECTION ===== */
+
+#languages {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-radius: 20px;
+  margin: 30px 5%;
+}
+
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.language-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-top: 4px solid #2563eb;
+  transition: 0.4s ease;
+}
+
+.language-card:nth-child(2) { border-top-color: #7c3aed; }
+.language-card:nth-child(3) { border-top-color: #22c55e; }
+
+.language-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+.language-card h4 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.language-card ul {
+  padding-left: 18px;
+}
+
+.language-card li {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+/* Professional polish */
+body {
+  letter-spacing: 0.2px;
+}
+
+.hero h1 {
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 16px;
+}
+
+.project-card h3 {
+  font-weight: 700;
+}
+
+
+
